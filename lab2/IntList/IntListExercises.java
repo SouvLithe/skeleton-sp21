@@ -10,7 +10,9 @@ public class IntListExercises {
      */
     public static void addConstant(IntList lst, int c) {
         IntList head = lst;
-        while (head.rest != null) {
+        // 检查 头部是否为空即可，在向下检查会报错
+        //while (head.rest != null) {
+        while (head != null) {
             head.first += c;
             head = head.rest;
         }
@@ -33,7 +35,9 @@ public class IntListExercises {
         }
     }
 
-    /** Returns the max value in the IntList starting at L. */
+    /**
+     * Returns the max value in the IntList starting at L.
+     */
     public static int max(IntList L) {
         int max = L.first;
         IntList p = L.rest;
@@ -46,15 +50,18 @@ public class IntListExercises {
         return max;
     }
 
-    /** Returns true if the last digit of x is equal to
-     *  the first digit of x.
+    /**
+     * Returns true if the last digit of x is equal to
+     * the first digit of x.
      */
     public static boolean firstDigitEqualsLastDigit(int x) {
-        int lastDigit = x % 10;
-        while (x > 10) {
+        int lastDigit = x % 10; // 算出0，正常
+        // 如果正好是10的话， x>10 会被钻漏子
+        //while (x > 10) {  //不会进入这个循环，异常
+        while (x >= 10) {
             x = x / 10;
         }
-        int firstDigit = x % 10;
+        int firstDigit = x % 10; // 算出0，而非预想的1
         return firstDigit == lastDigit;
     }
 
@@ -76,7 +83,8 @@ public class IntListExercises {
         if (currElemIsPrime) {
             lst.first *= lst.first;
         }
-
-        return currElemIsPrime || squarePrimes(lst.rest);
+        // 注意双重 || 或者 && 有短路功能，注意先后顺序
+        return squarePrimes(lst.rest) || currElemIsPrime;
+        //return currElemIsPrime || squarePrimes(lst.rest);
     }
 }

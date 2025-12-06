@@ -4,7 +4,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class AddConstantTest {
-
+    // 解决方法:在 IntListExercises 中找到 addConstant 方法，他不是看头中的元素，而是头的rest
+    // 最后一个元素的 rest 肯定是 null 了，这样肯定是错的
     @Test
     public void testAddConstantOne() {
         IntList lst = IntList.of(1, 2, 3, 4, 5);

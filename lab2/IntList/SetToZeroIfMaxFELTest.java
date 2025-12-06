@@ -18,7 +18,7 @@ public class SetToZeroIfMaxFELTest {
         IntListExercises.setToZeroIfMaxFEL(L);
         assertEquals("0 -> 22 -> 45 -> 0 -> 0", L.toString());
     }
-
+    // IntListExercises 类中的 firstDigitEqualsLastDigit 方法存在问题
     @Test
     public void testZeroOutFELMaxes3() {
         IntList L = IntList.of(5, 535, 35, 11, 10, 0);

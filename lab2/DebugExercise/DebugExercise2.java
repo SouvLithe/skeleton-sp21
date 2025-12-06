@@ -10,10 +10,13 @@ public class DebugExercise2 {
         int w = (b - a) >> 31;
         /* If you're stepping into this function, click the
            step out button because you're not going to learn anything. */
+       //TODO 这个它判断的是取最小值，给它改一下就行了
+        /*int w = (b - a) >> 31;
         int z = ~(b - a) >> 31;
 
         int max = b & w | a & z;
-        return max;
+        return max;*/
+        return Math.max(a, b);
     }
 
 
@@ -58,7 +61,9 @@ public class DebugExercise2 {
         int i = 0;
         int sum = 0;
         while (i < x.length) {
-            sum = sum + add(sum, x[i]);
+            //会导致后面的值重复加上前面的值
+            //sum = sum + add(sum, x[i]);
+            sum = sum + x[i];
             i = i + 1;
         }
         return sum;

@@ -23,5 +23,34 @@ public class TimeAList {
 
     public static void timeAListConstruction() {
         // TODO: YOUR CODE HERE
+        //对 Alist 进行测试
+        // 1-创造 printTimingTable 对应的三个AList，进行参数初始化
+        AList<Integer> Ns = new AList<>();
+        AList<Double> times = new AList<>();
+        AList<Integer> opCounts = new AList<>();
+        //维护 n 的初始值：测试多少的量
+        int n = 1000;
+        //列表中只有 8 行所以遍历 8 次
+        for (int i = 0; i < 8; i++) {
+            // 先把n加进去
+            Ns.addLast(n);
+            // 2-开始记录调用的 初始时间
+            Stopwatch sw = new Stopwatch();
+            // 3-创建临时数组，进行qps测试
+            AList<Integer> temp = new AList<>();
+            //初始化值
+            int ops = 0;
+            for (int j = 0; j < n; j++) {
+                //查看是否会漏值-与Ns的值比较一下就可以知道了
+                temp.addLast(1);
+                ops++;
+            }
+            // 4-拿到运行时长
+            double ms = sw.elapsedTime();
+            times.addLast(ms);
+            opCounts.addLast(ops);
+            n = n * 2;
+        }
+        printTimingTable(Ns, times, opCounts);
     }
 }
