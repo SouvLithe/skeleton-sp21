@@ -1,16 +1,21 @@
 # CS61B - SPRING 2021
 Personal solutions, for reference only
+
 ---
 UC Berkeley CS 61B Data Structures, Spring 2021
 
 URL: https://sp21.datastructur.es/
 
 skeleton: https://github.com/Berkeley-CS61B/skeleton-sp21
+
 ---
 Gradescope
 course code: MB7ZPY
+
 ---
+
 # Assignments
+
 lab1: 32/32
 
 lab2: 64/64
