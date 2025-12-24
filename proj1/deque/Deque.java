@@ -9,7 +9,7 @@ public interface Deque<T> {
     void addLast(T item);
 
     /** 如果deque为空则返回true，否则返回false */
-    default boolean isEmpty(){
+    default boolean isEmpty() {
         return size() == 0;
     }
 

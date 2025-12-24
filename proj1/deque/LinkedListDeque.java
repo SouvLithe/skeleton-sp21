@@ -12,10 +12,12 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
         private Node next = null;
         // 实际存储内容
         private T content;
+
         // 给内容赋值
-        public Node(T content) {
+        Node(T content) {
             this.content = content;
         }
+
         // 辅助下面的 getRecursion
         public T recursive(int index) {
             if (index == 0) {
@@ -26,6 +28,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             }
         }
     }
+
     // 维护一个 size，让查长度的时间可以缩减至常数时间
     private int size;
     //  维护一个 sentinel，特值处理，使得每个节点都有一个前驱一个后继
@@ -108,7 +111,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             return null;
         }
         Node temp = sentinel.prev;
-        sentinel.prev =  temp.prev;
+        sentinel.prev = temp.prev;
         temp.prev.next = temp.next;
         size -= 1;
         return temp.content;
@@ -116,7 +119,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
 
     @Override
     public T get(int index) {
-        if (index >= size){
+        if (index >= size) {
             return null;
         }
         Node current = sentinel.next;
@@ -125,13 +128,16 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
         }
         return current.content;
     }
+
     private class LinkedListDequeIterator implements Iterator<T> {
         // 初始化位置指针
         private int position = 0;
+
         @Override
         public boolean hasNext() {
             return position < size;
         }
+
         @Override
         public T next() {
             if (!hasNext()) {
@@ -147,6 +153,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
     public Iterator<T> iterator() {
         return new LinkedListDequeIterator();
     }
+
     //渐进式设计
     @Override
     public boolean equals(Object o) {
@@ -155,7 +162,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             return true;
         }
         // 看看两者类型是否相等
-        if(o instanceof Deque){
+        if (o instanceof Deque) {
             Deque<T> target = (Deque<T>) o;
             //两者大小是否相等
             if (size != target.size()) {
@@ -163,7 +170,7 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
             }
             //两者中的每个元素内容是否相等
             for (int i = 0; i < size; i++) {
-                if(!target.get(i).equals(this.get(i))) {
+                if (!target.get(i).equals(this.get(i))) {
                     return false;
                 }
             }
@@ -172,7 +179,9 @@ public class LinkedListDeque<T> implements Deque<T>, Iterable<T> {
         return false;
     }
 
-    /** Same as get, but uses recursion. */
+    /**
+     * Same as get, but uses recursion.
+     */
     public T getRecursive(int index) {
         if (index >= size) {
             return null;
