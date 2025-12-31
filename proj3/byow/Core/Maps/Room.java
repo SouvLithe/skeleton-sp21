@@ -9,8 +9,7 @@ import byow.TileEngine.Tileset;
 import java.util.ArrayList;
 import java.util.Set;
 
-import static byow.Core.utils.Ints.min;
-
+import static java.lang.Math.min;
 
 /**
  * Represents rooms generation.
