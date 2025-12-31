@@ -104,7 +104,7 @@ public class Utils {
      * Give this file a good read as it provides several useful utility functions
      * to save you some time.
      *
-     * @author Edward Tsang
+     * @author SouvLithe
      */
     public static String fixInputString(Engine engine, String input) {
         StringBuilder split = new StringBuilder();

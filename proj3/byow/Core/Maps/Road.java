@@ -13,7 +13,7 @@ import java.util.Queue;
 /**
  * Represents roads generation.
  *
- * @author Edward Tsang
+ * @author SouvLithe
  */
 public class Road {
     public static void createRoad(World world, Variables v) {

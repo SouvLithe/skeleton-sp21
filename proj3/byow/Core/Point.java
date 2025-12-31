@@ -10,7 +10,7 @@ import java.util.Objects;
 /**
  * Represent {x,y} point with a rank(depth in a tree)
  *
- * @author Edward Tsang
+ * @author SouvLithe
  */
 public class Point implements Serializable {
     private final int x;

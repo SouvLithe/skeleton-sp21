@@ -14,7 +14,7 @@ import static java.lang.Math.min;
 /**
  * Represents rooms generation.
  *
- * @author Edward Tsang
+ * @author SouvLithe
  */
 public class Room {
     /**

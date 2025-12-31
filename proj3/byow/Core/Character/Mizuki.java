@@ -4,6 +4,9 @@ import byow.Core.World;
 
 import java.io.Serializable;
 
+/**
+ * @author SouvLithe
+ */
 public class Mizuki implements Serializable {
     private int x;
     private int y;

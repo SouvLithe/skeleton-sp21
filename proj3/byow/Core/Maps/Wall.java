@@ -10,7 +10,7 @@ import java.util.ArrayList;
 /**
  * Represents walls generation and rebuild.
  *
- * @author Edward Tsang
+ * @author SouvLithe
  */
 public class Wall {
 

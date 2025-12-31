@@ -7,6 +7,9 @@ import edu.princeton.cs.introcs.StdDraw;
 
 import java.awt.*;
 
+/**
+ * @author SouvLithe
+ */
 public class Framework {
     private final int depth;
     private final int health;

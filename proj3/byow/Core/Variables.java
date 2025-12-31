@@ -11,7 +11,7 @@ import java.util.Random;
 /**
  * Represents temp variables during generating the world.
  *
- * @author Edward Tsang
+ * @author SouvLithe
  */
 public class Variables implements Serializable {
     World world;

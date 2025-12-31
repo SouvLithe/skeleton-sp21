@@ -7,6 +7,9 @@ import byow.TileEngine.Tileset;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+/**
+ * @author SouvLithe
+ */
 public class Characters implements Serializable {
     private final Mizuki mizuki;
     private final ArrayList<Point> npc = new ArrayList<>();
