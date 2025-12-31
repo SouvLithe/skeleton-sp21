@@ -2,12 +2,15 @@ package byow.lab12;
 
 import org.junit.Test;
 
+/**
+ * 写两个测试
+ */
 public class Hexagon {
     public static String[] addHexagon(int s) {
         String[] hex = new String[2 * s];
         for (int i = 0; i < s; i++) {
             String line = " ".repeat(s - i - 1) +
-                    "a".repeat(s+2*i) +
+                    "a".repeat(s + 2 * i) +
                     " ".repeat(s - i - 1);
             hex[i] = line;
             hex[2 * s - i - 1] = line;
