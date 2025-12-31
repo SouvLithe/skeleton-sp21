@@ -1,5 +1,7 @@
 # CS61B - SPRING 2021
-Personal solutions, for reference only
+Completion Date: December 31, 2025. 
+It was completed just before the deadline set by Gradescope.
+Personal solution method, for reference only
 
 ---
 UC Berkeley CS 61B Data Structures, Spring 2021
@@ -27,7 +29,7 @@ course code: MB7ZPY
 - projcet1-checkpoint: 16/16
 - project1: 640/640
 - project1-EC: 32/32
-- project2-checkpoint: 16/
-- project2: 1696/
-- project3-part1: 100/
-- projcet3-part2: 100/
+- project2-checkpoint: 16/16
+- project2: 1696/1600
+- project3-part1: 100/100
+- projcet3-part2: 100/100
